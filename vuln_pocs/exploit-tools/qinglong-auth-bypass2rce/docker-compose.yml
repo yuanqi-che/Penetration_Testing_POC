@@ -1,0 +1,13 @@
+version: '3'
+services:
+  qinglong:
+    image: whyour/qinglong:2.20.1
+    container_name: ql-vuln-test
+    ports:
+      - '5710:5700'
+    volumes:
+      - ql_data:/ql/data
+    restart: unless-stopped
+
+volumes:
+  ql_data:
